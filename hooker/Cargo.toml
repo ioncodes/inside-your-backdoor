@@ -1,0 +1,11 @@
+[package]
+name = "hooker"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+retour = "0.1.0" # https://github.com/darfink/detour-rs/pull/41
+winapi = { version = "0.3.7", features = ["minwindef", "windef", "winnt", "libloaderapi"] }

@@ -1,0 +1,7 @@
+[package]
+name = "pimp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dll-syringe = { git = "https://github.com/OpenByteDev/dll-syringe" }
