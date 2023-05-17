@@ -27,7 +27,6 @@ type FnPSServerTakeDamage = unsafe extern "system" fn(*mut c_void, f32, *const c
 type FnPSUpdate = unsafe extern "system" fn(*mut c_void, *const c_void) -> c_void;
 type FnEInternalElevatorCode = unsafe extern "system" fn(*mut c_void, *const UnityString, *const c_void) -> c_void;
 
-
 fn server_take_damage(this: *mut c_void, damage: f32, method: *const c_void) -> c_void {
     println!("Called PlayerStats::ServerTakeDamage(void*, {}, void*).", damage);
     unsafe { PSServerTakeDamage.call(this, 0.0, method) }
